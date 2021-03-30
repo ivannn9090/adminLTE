@@ -17,10 +17,10 @@ foreach ($_SERVER as $key => $value) {
   $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
-define('DB_NAME', $connectstr_db_web);
-define('DB_USER', $connectstr_azure);
-define('DB_PASSWORD', $connectstr_6#vWHD_$);
-define('DB_HOST', $connectstr_localhost);
+define('DB_NAME', $connectstr_dbname);
+define('DB_USER', $connectstr_dbusername);
+define('DB_PASSWORD', $connectstr_dbpassword);
+define('DB_HOST', $connectstr_dbhost);
 
 $active_group = 'default';
 $query_builder = true;
