@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-$servername = "";
-$username = "";
-$password = "";
-$dbname = "";
+$servername = "localhost";
+$username = "azure";
+$password = "6#vWHD_$";
+$dbname = "db_web";
 
 // Parsing connnection string
 foreach ($_SERVER as $key => $value) {
