@@ -1,26 +1,34 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+$servername = "localhost";
+$username = "azure";
+$password = "6#vWHD_$";
+$dbname = "db_web";
 
-define('ENV_STR', 'MYSQLCONNSTR_localdb');
-
-$return = array('result' => false);
-
-if (isset($_SERVER[ENV_STR])) {
-    $connectStr = $_SERVER[ENV_STR];
-
-    $return['connection'] = array(
-        'hostname' => preg_replace("/^.*Data Source= localhot", $connectStr),
-        'database' => preg_replace("/^.*Database= db_web", $connectStr),
-        'user' => preg_replace("/^.*User Id= azure", $connectStr),
-        'password' => preg_replace("/^.*Password= 6#vWHD_$", $connectStr)
-    );
-
-    $return['result'] = true;
+// Parsing connnection string
+foreach ($_SERVER as $key => $value) {
+    if (strpos($key, "MYSQLCONNSTR_") !== 0) {
+        continue;
+    }
+    
+    $servername = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+    $dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
+    $username = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+    $password = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
-header('Content-Type: application/json; charset=utf-8');
-echo json_encode($return);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "connection successful<br/>";
+}
+$conn->close();
+?>
+
 $active_group = 'default';
 $query_builder = true;
 
