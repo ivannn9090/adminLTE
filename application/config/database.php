@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-<?php
+
 define('ENV_STR', 'MYSQLCONNSTR_localdb');
 
 $return = array('result' => false);
