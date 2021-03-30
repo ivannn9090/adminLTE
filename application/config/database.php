@@ -33,9 +33,14 @@ $conn->close();
 $active_group = 'default';
 $query_builder = true;
 
-$db['default'] = array(
-    'dsn'    => '',
 
+
+   $db['default'] = array(
+    'dsn'    => '',
+    'hostname' => 'localhost',
+    'username' => 'azure',
+    'password' => 'maksudlo',
+    'database' => 'db_web',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => false,
@@ -51,4 +56,3 @@ $db['default'] = array(
     'failover' => array(),
     'save_queries' => true
 );
-
