@@ -10,10 +10,10 @@ if (isset($_SERVER[ENV_STR])) {
     $connectStr = $_SERVER[ENV_STR];
 
     $return['connection'] = array(
-        'hostname' => preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $connectStr),
-        'database' => preg_replace("/^.*Database=(.+?);.*$/", "\\1", $connectStr),
-        'user' => preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $connectStr),
-        'password' => preg_replace("/^.*Password=(.+?)$/", "\\1", $connectStr)
+        'hostname' => preg_replace("/^.*Data Source= localhot", $connectStr),
+        'database' => preg_replace("/^.*Database= db_web", $connectStr),
+        'user' => preg_replace("/^.*User Id= azure", $connectStr),
+        'password' => preg_replace("/^.*Password= 6#vWHD_$", $connectStr)
     );
 
     $return['result'] = true;
