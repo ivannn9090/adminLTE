@@ -75,7 +75,7 @@ $query_builder = true;
 
 $db['default'] = array(
     'dsn'    => '',
-    'hostname' => 'localhost',
+    'hostname' => 'ftp://waws-prod-sg1-053.ftp.azurewebsites.windows.net/site/wwwroot',
     'username' => 'azure',
     'password' => '6#vWHD_$',
     'database' => 'db_web',
