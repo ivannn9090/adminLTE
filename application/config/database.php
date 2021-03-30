@@ -54,10 +54,7 @@ $query_builder = true;
 
 $db['default'] = array(
     'dsn'    => '',
-    'hostname' => 'localhost',
-    'username' => 'azure',
-    'password' => '6#vWHD_$',
-    'database' => 'db_web',
+
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => false,
