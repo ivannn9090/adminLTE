@@ -79,7 +79,7 @@ $db['default'] = array(
     'username' => 'azure',
     'password' => '6#vWHD_$',
     'database' => 'db_web',
-    'dbdriver' => 'mysqli',
+    'dbdriver' => 'mysq',
     'dbprefix' => '',
     'pconnect' => false,
     'db_debug' => (ENVIRONMENT !== 'production'),
