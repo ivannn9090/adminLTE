@@ -1,5 +1,10 @@
 <?php
 
+defined('BASEPATH') or exit('No direct script access allowed');
+
+
+   $db['default'] = array(
+    'dsn'    => '',
 
 foreach ($_SERVER as $key => $value) {
   if (strpos($key, "MYSQLCONNSTR_") !== 0) {
@@ -19,11 +24,6 @@ define('DB_NAME', $connectstr_dbname);
 define('DB_USER', $connectstr_dbusername);
 define('DB_PASSWORD', $connectstr_dbpassword);
 define('DB_HOST', $connectstr_dbhost);
-
-   $db['default'] = array(
-    'dsn'    => '',
-
-
 
 $connectstr_dbhost = 'localhost';
 $connectstr_dbname = 'db_web';
