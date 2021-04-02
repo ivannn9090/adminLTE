@@ -18,16 +18,16 @@ foreach ($_SERVER as $key => $value) {
 $active_group = 'default';
 $query_builder = true;
 
-
+define('DB_NAME', $connectstr_dbname);
+define('DB_USER', $connectstr_dbusername);
+define('DB_PASSWORD', $connectstr_dbpassword);
+define('DB_HOST', $connectstr_dbhost);
 
    $db['default'] = array(
     'dsn'    => '',
 
 
-define('DB_NAME', $connectstr_dbname);
-define('DB_USER', $connectstr_dbusername);
-define('DB_PASSWORD', $connectstr_dbpassword);
-define('DB_HOST', $connectstr_dbhost);
+
 
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
