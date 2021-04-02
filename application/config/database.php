@@ -1,8 +1,5 @@
 <?php
-$connectstr_dbhost = 'localhost';
-$connectstr_dbname = 'db_web';
-$connectstr_dbusername = 'azure';
-$connectstr_dbpassword = '6#vWHD_$';
+
 
 foreach ($_SERVER as $key => $value) {
   if (strpos($key, "MYSQLCONNSTR_") !== 0) {
@@ -28,7 +25,10 @@ define('DB_HOST', $connectstr_dbhost);
 
 
 
-
+$connectstr_dbhost = 'localhost';
+$connectstr_dbname = 'db_web';
+$connectstr_dbusername = 'azure';
+$connectstr_dbpassword = '6#vWHD_$';
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => false,
